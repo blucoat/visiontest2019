@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+sourceCompatibility = 1.11
+
+repositories {
+    maven {
+        url 'http://first.wpi.edu/FRC/roborio/maven/release'
+    }
+    maven {
+        url 'https://dl.bintray.com/teamhyper/maven'
+    }
+}
+
+dependencies {
+    compile 'edu.wpi.first.thirdparty.frc2019.opencv:opencv-java:3.4.4-4'
+    compile 'org.hyperonline:hyperlib:1.0.0'
+    runtime 'edu.wpi.first.thirdparty.frc2019.opencv:opencv-jni:3.4.4-4:linuxx86-64'
+    runtime 'edu.wpi.first.ntcore:ntcore-jni:2019.1.1:all'
+    runtime 'edu.wpi.first.hal:hal-java:2019.1.1'
+    runtime 'edu.wpi.first.hal:hal-jni:2019.1.1:all'
+    runtime 'edu.wpi.first.cscore:cscore-jni:2019.1.1:all'
+}
+
+mainClassName = 'org.hyperonline.visiontest2019.runner.Runner'
